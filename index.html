@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@400;500;800&family=PT+Serif:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Develapps Web</title>
+    <script>
+        $(document).ready(function () {
+            $(".collapsible").click(function () {
+                $(".menu-options-collapse").slideToggle("slow");
+            });
+        })
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav id="full-navbar">
+                <div class="items">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="./img/logo-develapps.png" alt="Develapps logo">
+                        </a>
+                    </div>
+                    <div class="menu-options">
+                        <ul>
+                            <li><a href="#">Servicios</a></li>
+                            <li><a href="#">Nosotros</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#" class="jobs-active">Empleo</a></li>
+                        </ul>
+                    </div>
+                    <div class="contact-button">
+                        <button class="contact-button">Contactar</button>
+                    </div>
+                </div>
+            </nav>
+            <nav id="collapse-navbar">
+                <div class="menu">
+                    <button type="button" class="collapsible">
+                        <svg class="bi bi-justify" width="24px" height="24px" viewBox="0 0 16 16" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M2 12.5a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5zm0-3a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5zm0-3a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5zm0-3a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <img src="./img/logo-develapps-small.png" alt="Develapps logo" height="45" width="45">
+                    <div class="red-square"></div>
+                </div>
+                <div class="menu-options-collapse">
+                    <ul>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#" class="jobs-active">Empleo</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main role="main">
+            <section class="stategy">
+                <div class="title monserrat-bold">Estrategia, diseño y desarrollo de <span class="red-text">apps
+                        móviles</span></div>
+                <div class="subtitle">Somos un equipo especializado en el desarrollo de aplicaciones móviles para
+                    empresas.</span>
+                </div>
+            </section>
+        </main>        
+        <footer>
+            <div class="items">
+                <div class="headquarters">
+                    <div class="headquarter">
+                        <span class="monserrat-bold">Valencia</span>
+                        <img src="./img/marker.png" alt="Oficina Develapps Valencia" height="15" width="11">
+                        <address>
+                            Calle Manuel Candela 8, 1<br>
+                            Valencia, España<br>
+                            Telf: 961 106 465
+                        </address>
+                    </div>
+                    <div class="headquarter">
+                        <span class="monserrat-bold">Madrid</span>
+                        <img src="./img/marker.png" alt="Oficina Develapps Madrid" height="15" width="11">
+                        <address>
+                            Paseo de la Castellana 79 - Planta 7<br>
+                            Madrid, España<br>
+                            Telf: 917 916 640
+                        </address>
+                    </div>
+                </div>
+                <div class="sitemap">
+                    <div class="site-section">
+                        <span class="monserrat-bold">Estrategia</span>
+                        <img src="./img/full-circle.svg" height="11" width="11" alt="Estrategia">
+                        <ul>
+                            <li>Análisis de negocio</li>
+                            <li>MVP (Mínimo producto viable)</li>
+                            <li>Viabilidad técnica</li>
+                            <li>Plan de trabajo</li>
+                            <li>Costes</li>
+                            <li>Transparencia</li>
+                        </ul>
+                    </div>
+                    <div class="site-section">
+                        <span class="monserrat-bold">Diseño</span>
+                        <img src="./img/full-circle.svg" height="11" width="11" alt="Diseño">
+                        <ul>
+                            <li>Branding</li>
+                            <li>Diseño de Interfaz</li>
+                            <li>Diseño UX</li>
+                            <li>Prototipado</li>
+                            <li>Diseño Gráfico</li>
+                            <li>Ilustración infográfica</li>
+                        </ul>
+                    </div>
+                    <div class="site-section">
+                        <span class="monserrat-bold">Desarrollo</span>
+                        <img src="./img/full-circle.svg" height="11" width="11" alt="Estrategia">
+                        <ul>
+                            <li>Desarrollo Nativo</li>
+                            <li>Android (Kotlin)</li>
+                            <li>iOS (Swift)</li>
+                            <li>Backend</li>
+                            <li>Frontend</li>
+                            <li>Wearables</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>            
+        </footer>
+    </div>
+
+
+
+    <!-- <header>
+        <div class="container">
+            <div class="row header" id="full-navbar">
+                <div class="col-2 d-flex align-items-center">
+                    <a href="#">
+                        <img src="./img/logo-develapps.png" alt="Develapps logo">
+                    </a>
+                </div>
+                <div class="col-8 d-flex justify-content-center">
+                    <ul>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#" class="jobs-active">Empleo</a></li>
+                    </ul>
+                </div>
+                <div class="col-2 d-flex align-items-center">
+                    <button class="contact-button">Contactar</button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex w-100 justify-content-between align-items-center" id="collapse-navbar">
+            <svg class="bi bi-justify" width="24px" height="24px" viewBox="0 0 16 16" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M2 12.5a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5zm0-3a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5zm0-3a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5zm0-3a.5.5 0 01.5-.5h11a.5.5 0 010 1h-11a.5.5 0 01-.5-.5z"
+                    clip-rule="evenodd" />
+            </svg>
+            <a href="#">
+                <img src="./img/logo-develapps-small.png" alt="Develapps logo" height="45" width="45">
+            </a>
+            <div class="red-square"></div>
+        </div>
+    </header>
+    <div class="row stategy">
+        <div class="col-sm-1">&nbsp;</div>
+        <div class="col-sm-9 col-xs-12">
+            <div class="title monserrat-bold">Estrategia, diseño y desarrollo de <span class="red-text">apps
+                    móviles</span></div>
+            <div class="subtitle">Somos un equipo especializado en el desarrollo de aplicaciones móviles para
+                empresas.</span>
+            </div>
+            <div class="col-sm-2">&nbsp;</div>
+        </div>
+    </div>
+    <div class="row portfolio">
+        <div class="col-sm-1">&nbsp;</div>
+        <div class="col-sm-10 col-xs-12 d-flex justify-content-between">
+            <div class="monserrat-bold title">Últimos proyectos</div>
+            <div>Botones</div>
+        </div>
+        <div class="col-sm-1">&nbsp;</div>
+    </div> -->
+
+</body>
+
+</html>

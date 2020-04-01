@@ -1,0 +1,281 @@
+/* Generic styles */
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0; 
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #787878;
+    text-align: left;
+    background-color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;    
+    width: 100%;
+}
+
+section {
+    padding: 0 15px;
+}
+
+.red-text {
+    color: #d64123;
+}
+
+.monserrat-bold {
+    font-family: Montserrat;
+    font-weight: 800;
+}
+
+.monserrat-regular {
+    font-family: Montserrat;
+    font-weight: 800;
+}
+
+.pt-serif {
+    font-family: "PT Serif", serif;
+}
+
+/* Module styles */
+
+header {
+    nav {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 35px;
+    }
+
+    ul li a {
+        text-decoration: none;
+        font-family: "Montserrat";
+        font-weight: 500;
+        font-size: 0.875rem;
+        color: #363636;
+    }
+
+    #full-navbar {
+        display: none;
+    }
+
+    #collapse-navbar {
+        position: sticky;
+        top: 0;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+
+        .collapsible {
+            border: none;
+            background-color: transparent;
+            outline: transparent;
+        }
+
+        .menu-options-collapse {
+            display: none;
+
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+
+                li {
+                    display: flex;
+                    justify-content: center;
+                    height: 35px;
+                    align-items: center;
+                    border-bottom: 1px solid #d64123;
+
+                    &:hover {
+                        border-bottom-color: #d8d8d8;
+                        background-color: #f6f8f9;
+                    }
+                }
+            }
+
+            .menu svg {
+                margin-left: 28px;
+            }
+
+            .red-square {
+                background-color: #d64123;
+                width: 79px;
+                height: 70px;
+            }
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+    }
+}
+
+.stategy {
+    font-size: 10px;
+    margin-bottom: 80px;
+
+    .title {
+        font-size: 3.8em;
+        color: #363636;
+        line-height: 1.1;
+        margin-bottom: 46px;
+    }
+
+    .subtitle {
+        font-family: "PT Serif", serif;
+        font-size: 2em;
+        color: #363636;
+        max-width: 60%;
+    }
+}
+
+.portfolio {
+    font-size: 10px;
+    line-height: 1.05;
+
+    .title {
+        font-size: 3.8em;
+    }
+}
+
+footer {
+    background-color: #f6f8f9;
+    display: flex;
+    font-size: 10px;
+    justify-content: center;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    header {
+        margin-bottom: 100px;
+
+        #collapse-navbar {
+            display: none;
+        }
+
+        #full-navbar {
+            // position: sticky;
+            // top: 0;
+            display: flex;
+            justify-content: center;            
+            width: 100%;
+
+            .items {
+                width: 100%;
+                display: flex;
+                max-width: 1140px;
+                justify-content: space-between;
+                align-items: center;  
+                padding: 0 2rem;         
+                .menu-options {
+                    display: flex;
+                    padding: 0 1rem;                    
+                    ul {
+                        list-style: none;
+                        display: flex;
+                        margin: 0;
+    
+                        li {
+                            width: 80px;
+                            height: 70px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-bottom: 2px solid #d64123;
+    
+                            &:hover {
+                                border-bottom-color: #d8d8d8;
+                                background-color: #f6f8f9;
+                            }
+                        }
+                    }
+                }
+                .contact-button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: "Lato", sans-serif;
+                    height: 44px;
+                    color: #fff;
+                    font-size: 1rem;
+                    width: 100%;
+                    max-width: 160px;
+                    border-radius: 3px;
+                    background-color: #d64123;
+                    border: none;
+                }
+
+            }
+        }
+    }
+
+    .stategy {
+        padding-left: 15%;
+        margin-bottom: 160px;
+
+        .title {
+            font-size: 7.2em;
+            margin-bottom: 72px;
+        }
+
+        .subtitle {
+            font-size: 2.2em;
+        }
+    }
+
+    .portfolio .title {
+        font-size: 4.2em;
+    }
+
+    footer .items {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 1140px;
+        padding: 88px 0;
+        .headquarters, .sitemap {
+            display: flex;
+    
+            .headquarter,
+            .site-section {
+                display: flex;
+                flex-direction: column;
+                margin-right: 30px;
+    
+                span {
+                    font-size: 1.8em;
+                }
+    
+                address,
+                ul {
+                    font-family: "PT Serif", serif;
+                    font-size: 1.3em;
+                    font-style: normal;
+                }
+    
+                img {
+                    margin: 18px 0;
+                }
+            }
+    
+            .site-section {
+                align-items: flex-end;
+    
+                ul {
+                    list-style: none;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
