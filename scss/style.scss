@@ -1,11 +1,16 @@
 /* Generic styles 1234 */
 
-*, ::after, ::before {
+$container-home-width: 1140px;
+$red-color: #d64123;
+
+*,
+::after,
+::before {
     box-sizing: border-box;
 }
 
 body {
-    margin: 0; 
+    margin: 0;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -14,9 +19,9 @@ body {
     background-color: #fff;
 }
 
-.container {
+.container-home {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     width: 100%;
 }
 
@@ -25,7 +30,7 @@ section {
 }
 
 .red-text {
-    color: #d64123;
+    color: $red-color;
 }
 
 .monserrat-bold {
@@ -163,28 +168,28 @@ footer {
             display: none;
         }
 
-        #full-navbar {
-            // position: sticky;
-            // top: 0;
+        #full-navbar {           
             display: flex;
-            justify-content: center;            
+            justify-content: center;
             width: 100%;
 
-            .items {
+            .container {
                 width: 100%;
                 display: flex;
-                max-width: 1140px;
+                max-width: $container-home-width;
                 justify-content: space-between;
-                align-items: center;  
-                padding: 0 2rem;         
+                align-items: center;
+                padding: 0 2rem;
+
                 .menu-options {
                     display: flex;
-                    padding: 0 1rem;                    
+                    padding: 0 1rem;
+
                     ul {
                         list-style: none;
                         display: flex;
                         margin: 0;
-    
+
                         li {
                             width: 80px;
                             height: 70px;
@@ -192,7 +197,7 @@ footer {
                             justify-content: center;
                             align-items: center;
                             border-bottom: 2px solid #d64123;
-    
+
                             &:hover {
                                 border-bottom-color: #d8d8d8;
                                 background-color: #f6f8f9;
@@ -200,6 +205,7 @@ footer {
                         }
                     }
                 }
+
                 .contact-button {
                     display: flex;
                     justify-content: center;
@@ -211,10 +217,9 @@ footer {
                     width: 100%;
                     max-width: 160px;
                     border-radius: 3px;
-                    background-color: #d64123;
+                    background-color: $red-color;
                     border: none;
                 }
-
             }
         }
     }
@@ -237,43 +242,45 @@ footer {
         font-size: 4.2em;
     }
 
-    footer .items {
-        display: flex;
+    footer .container {
+        display: flex;       
         justify-content: center;
         width: 100%;
-        max-width: 1140px;
-        padding: 88px 0;
-        .headquarters, .sitemap {
+        max-width: $container-home-width;
+        padding: 88px 30px;       
+
+        .col {
+
             display: flex;
-    
-            .headquarter,
-            .site-section {
-                display: flex;
-                flex-direction: column;
-                margin-right: 30px;
-    
-                span {
-                    font-size: 1.8em;
-                }
-    
-                address,
-                ul {
-                    font-family: "PT Serif", serif;
-                    font-size: 1.3em;
-                    font-style: normal;
-                }
-    
-                img {
-                    margin: 18px 0;
-                }
+            flex: 1;
+            flex-direction: column;
+            margin: 0 15px;
+
+            span {
+                font-size: 1.8em;
             }
-    
-            .site-section {
+
+            address,
+            ul {
+                font-family: "PT Serif", serif;
+                font-size: 1.3em;
+                font-style: normal;
+                padding-left: 0;
+            }
+
+            img {
+                margin: 18px 0;
+            }
+
+            &.site-section {
                 align-items: flex-end;
-    
+
                 ul {
                     list-style: none;
                     text-align: right;
+                    li small{
+                        font-size: 0.625rem;
+                    }
                 }
             }
         }
